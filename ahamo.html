@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ahamo</title>
+
+  <!-- 🔹 ファビコン設定 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: url("images/background.png") no-repeat center center / cover;
+      text-align: center;
+      color: #000;
+    }
+
+    /* 🔹 トップページに戻るバナー設定 */
+    .top-banner {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .top-banner img {
+      width: 200px; /* ← バナーのサイズをここで調整可能 */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .top-banner img:hover {
+      transform: scale(1.05);
+    }
+
+    .banner-section {
+      padding: 60px 20px 60px; /* 上に余白を追加して重ならないように調整 */
+    }
+
+    .banner-text {
+      font-size: 2rem;
+      color: #007bff; /* 青色 */
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .banner {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .banner:hover {
+      transform: scale(1.05);
+    }
+
+    .banner img {
+      width: 80%;
+      max-width: 570px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #111;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .banner-text {
+        font-size: 1.4rem;
+      }
+
+      .top-banner img {
+        width: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 左上のトップページに戻るバナー -->
+  <a href="index.html" class="top-banner">
+    <img src="images/スマホプラン診断サイト_トップページバナー.png" alt="トップページに戻る" />
+  </a>
+
+  <!-- 🔹 メインバナー -->
+  <section class="banner-section">
+    <div class="banner-text">あなたにおすすめのプランはこちら！</div>
+    <a href="https://ahamo.com/" target="_blank" class="banner">
+      <img src="images/ahamo.png" alt="ahamo バナー" />
+    </a>
+    <div class="note">
+      ※詳しいプラン内容については公式ホームページをご確認ください。
+    </div>
+  </section>
+</body>
+</html>

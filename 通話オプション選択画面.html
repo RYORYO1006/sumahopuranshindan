@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>通話オプション選択画面</title>
+
+  <!-- ファビコンの設定 -->
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" sizes="180x180" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      background-image: url("images/background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column; /* ← 縦方向に並べるよう変更 */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 👇 追加：見出しのスタイル */
+    .page-title {
+      color: #007BFF; /* 青い文字 */
+      font-size: clamp(20px, 5vw, 32px);
+      font-weight: bold;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      margin-bottom: 40px; /* バナーとの間に余白を確保 */
+      letter-spacing: 1px;
+      user-select: none;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ripple-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      background: transparent;
+    }
+
+    a.ripple-button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border: 6px solid #00a0e9;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.2s;
+      z-index: 2;
+      text-decoration: none;
+    }
+
+    a.ripple-button:hover {
+      transform: scale(1.1);
+    }
+
+    .ripple-button .banner-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+
+    .ripple-button .banner-text span {
+      color: #00a0e9;
+      font-size: clamp(16px, 4vw, 24px);
+      font-weight: bold;
+      font-family: "Arial", sans-serif;
+      letter-spacing: 1px;
+      user-select: none;
+      margin: 0;
+    }
+
+    .ripple-button .banner-text span + span {
+      margin-top: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .ripple-container {
+        width: 140px;
+        height: 140px;
+      }
+
+      .page-title {
+        margin-bottom: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 👇 追加部分：タイトルをここに挿入 -->
+  <div class="page-title">通話オプションをどれにしますか？</div>
+
+  <div class="button-container">
+    <div class="ripple-container">
+      <a href="データ利用量選択画面_通話0分.html" class="ripple-button">
+        <div class="banner-text">
+          <span>通話</span>
+          <span>0分</span>
+        </div>
+      </a>
+    </div>
+    <div class="ripple-container">
+      <a href="データ利用量選択画面_通話5分以内.html" class="ripple-button">
+        <div class="banner-text">
+          <span>通話</span>
+          <span>5分以内</span>
+        </div>
+      </a>
+    </div>
+    <div class="ripple-container">
+      <a href="データ利用量選択画面_通話無制限.html" class="ripple-button">
+        <div class="banner-text">
+          <span>通話</span>
+          <span>無制限</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

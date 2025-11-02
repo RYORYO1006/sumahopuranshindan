@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>楽天モバイル</title>
+
+  <!-- 🔹 ファビコン設定 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: url("images/background.png") no-repeat center center / cover;
+      text-align: center;
+      color: #000;
+    }
+
+    /* 🔹 トップページに戻るバナー */
+    .top-banner {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .top-banner img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .top-banner img:hover {
+      transform: scale(1.05);
+    }
+
+    .banner-section {
+      padding: 60px 20px 60px;
+    }
+
+    .banner-text {
+      font-size: 2rem;
+      color: #007bff;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    /* 🔹 通常バナー */
+    .banner {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .banner:hover {
+      transform: scale(1.05);
+    }
+
+    /* 🔹 楽天モバイルバナー（自動リサイズ対応） */
+    .rakuten-banner img {
+      width: 100%;       /* 親要素いっぱいに広がる */
+      max-width: 500px;  /* 上限を設定 */
+      height: auto;      /* 縦横比を維持 */
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      margin: 2px;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #111;
+      margin-top: 15px;
+    }
+
+    /* 🔹 レスポンシブ対応（スマホ用） */
+    @media (max-width: 600px) {
+      .banner-text {
+        font-size: 1.4rem;
+      }
+
+      .top-banner img {
+        width: 90px;
+      }
+
+      .rakuten-banner img {
+        max-width: 300px;  /* スマホでは上限を小さく */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 左上のトップページに戻るバナー -->
+  <a href="index.html" class="top-banner">
+    <img src="images/スマホプラン診断サイト_トップページバナー.png" alt="トップページに戻る" />
+  </a>
+
+  <!-- 🔹 メインバナー -->
+  <section class="banner-section">
+    <div class="banner-text">あなたにおすすめのプランはこちら！</div>
+    
+    <!-- 🔸楽天モバイルバナー（画面サイズに応じて自動リサイズ） -->
+    <a href="https://hb.afl.rakuten.co.jp/hsc/4da1b037.89e6a8f7.4da1b004.95074259/?link_type=pict&rafst=rmn&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MjM3Nzg5NiwiYW1wIjpmYWxzZX0%3D"
+       target="_blank" 
+       rel="nofollow sponsored noopener" 
+       class="banner rakuten-banner">
+      <img src="https://hbb.afl.rakuten.co.jp/hsb/4da1b037.89e6a8f7.4da1b004.95074259/?me_id=2101065&me_adv_id=2377896&t=pict" 
+           alt="楽天リンクバナー" 
+           title="楽天リンクバナー">
+    </a>
+
+    <div class="note">
+      ※詳しいプラン内容については公式ホームページをご確認ください。
+    </div>
+  </section>
+</body>
+</html>

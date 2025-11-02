@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>データ利用量選択画面_通話無制限</title>
+
+  <!-- ファビコン設定 -->
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" sizes="180x180" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      background-image: url("images/background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column; /* ← 縦並びに変更 */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 👇 追加：タイトル部分のスタイル */
+    .page-title {
+      color: #007BFF; /* 青い文字 */
+      font-size: clamp(20px, 5vw, 32px);
+      font-weight: bold;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      margin-bottom: 40px; /* バナーとの間の余白 */
+      letter-spacing: 1px;
+      user-select: none;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .ripple-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      background: transparent;
+    }
+
+    a.ripple-button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border: 6px solid #00a0e9;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.2s;
+      z-index: 2;
+      text-decoration: none;
+    }
+
+    a.ripple-button:hover {
+      transform: scale(1.1);
+    }
+
+    .ripple-button .banner-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+
+    .ripple-button .banner-text span {
+      color: #00a0e9;
+      font-size: clamp(16px, 4vw, 24px);
+      font-weight: bold;
+      font-family: "Arial", sans-serif;
+      letter-spacing: 1px;
+      user-select: none;
+      margin: 0;
+    }
+
+    .ripple-button .banner-text span + span {
+      margin-top: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .ripple-container {
+        width: 140px;
+        height: 140px;
+      }
+
+      .page-title {
+        margin-bottom: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 👇 ここを追加 -->
+  <div class="page-title">データ利用量をどれにしますか？</div>
+
+  <div class="button-container">
+    <!-- 台形の上段（2つ） -->
+    <div class="row">
+      <div class="ripple-container">
+        <a href="povo2.0.html" class="ripple-button">
+          <div class="banner-text">
+            <span>データ</span>
+            <span>0GB</span>
+          </div>
+        </a>
+      </div>
+      <div class="ripple-container">
+        <a href="楽天モバイル.html" class="ripple-button">
+          <div class="banner-text">
+            <span>データ</span>
+            <span>3GB</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 台形の下段（3つ） -->
+    <div class="row">
+      <div class="ripple-container">
+        <a href="楽天モバイル.html" class="ripple-button">
+          <div class="banner-text">
+            <span>データ</span>
+            <span>20GB</span>
+          </div>
+        </a>
+      </div>
+      <div class="ripple-container">
+        <a href="楽天モバイル.html" class="ripple-button">
+          <div class="banner-text">
+            <span>データ</span>
+            <span>30GB</span>
+          </div>
+        </a>
+      </div>
+      <div class="ripple-container">
+        <a href="楽天モバイル.html" class="ripple-button">
+          <div class="banner-text">
+            <span>データ</span>
+            <span>無制限</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
